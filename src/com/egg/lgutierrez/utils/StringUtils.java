@@ -1,6 +1,6 @@
 package com.egg.lgutierrez.utils;
 
-import java.util.Scanner;
+
 
 public class StringUtils {
 	
@@ -12,9 +12,11 @@ public class StringUtils {
 	 * 
 	 * @return frase leida desde keiboard
 	 */
-	public static String leerFrase() {
+	public static String ingresarPorTeclado() {
 		return Input.getInstance().leerFrase();
 	}
 	
-	
+        public static int leerNumero() {
+		return Input.getInstance().leerNumero();
+        }        
 }

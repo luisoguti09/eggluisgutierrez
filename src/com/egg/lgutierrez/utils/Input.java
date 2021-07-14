@@ -20,5 +20,9 @@ public class Input {
 	public String leerFrase() {
 		return scannerKeyboard.nextLine();
 	}
+        
+        public int leerNumero() {
+		return scannerKeyboard.nextInt();
+	}
 
 }
