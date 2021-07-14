@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.egg.lgutierrez.utils;
+package com.egg.lgutierrez.ejercicios;
 
 /**
  *
  * @author Luis
  */
-public class MathUtils {
-	
-	public static int sumaNumeros(int n1, int n2) {
-	return n1 + n2;
-	}
+public class Ejercicio18 {
     
 }
