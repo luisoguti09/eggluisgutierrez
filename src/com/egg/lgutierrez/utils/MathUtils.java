@@ -11,8 +11,8 @@ package com.egg.lgutierrez.utils;
  */
 public class MathUtils {
 	
-	public static void sumaNumeros(int n1, int n2) {
-		return n1 + n2;
+	public static int sumaNumeros(int n1, int n2) {
+	return n1 + n2;
 	}
     
 }
