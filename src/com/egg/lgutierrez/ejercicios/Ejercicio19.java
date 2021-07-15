@@ -15,8 +15,9 @@ import com.egg.lgutierrez.utils.MathUtils;
  * @author Luis
  */
 public class Ejercicio19 {
-    private static int n,m;
-    private static int [][] matriz = new int [n][m];
+
+    private static int n, m;
+    private static int[][] matriz = new int[n][m];
 
     public int getN() {
         return n;
@@ -41,43 +42,55 @@ public class Ejercicio19 {
     public void setMatriz(int[][] matriz) {
         this.matriz = matriz;
     }
-    
-    public void llenarMatriz (int n,int m){
-        for (int i = 0; i < n ; i++) {
-            for (int j = 0; j < m; j++){
-                
+
+    public void llenarMatriz(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+
             }
-            
+
         }
     }
-    
-    public void mostrarMatriz (int n, int m){
-        for (int i = 0; i < n ; i++) {
-            for (int j = 0; j < m; j++){
-                if (i == 0){
+
+    public void mostrarMatriz() {
+        for (int i = 0; i < this.getN(); i++) {
+            for (int j = 0; j < this.getN(); j++) {
+                if ( i == 0 ) {
                     System.out.print("*");
-                if (j == 0 && j == m){
-                        System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                    }
+                    if (j == this.getN()-1)
+                        System.out.println();
                     
+                }  else {
+                    if (j==0 ){
+                        System.out.print("*");
+                    } else if (j==this.getN()-1){
+                        System.out.println("*");
+                        
+                    } else {
+                        if(i!=this.getN()-1){
+                             System.out.print(" ");
+                        }
+                       
+                    }
                 }
+                if(i==this.getN()-1) {
+                    if(j!=0 && j!= this.getN()-1){
+                        System.out.print("*");
+                    }
+                }
+                         
             }
-            
         }
-        System.out.println();
+
     }
-    
-    
+
     public static void main(String[] args) {
         Ejercicio19 ejer19 = new Ejercicio19();
+        System.out.println("Ahora te vamos a pedir el tamaño del cuadrado");
         ejer19.setN(MathUtils.pedirNumero());
-        ejer19.setM(MathUtils.pedirNumero());
-        ejer19.llenarMatriz(n, m);
-        ejer19.mostrarMatriz(n, m);
-        
+     //  ejer19.llenarMatriz(ejer19.getN());
+        ejer19.mostrarMatriz();
+
     }
-    
-    
+
 }
