@@ -18,12 +18,6 @@ public class MathUtils {
         System.out.println("Ingresá un número");
         return scanner.nextInt();
     }
-    
-     public static String pedirFrase(){
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Ingresá una frase");
-        return scanner.nextLine();
-    }
      
     public static int pedirNota(){
         Scanner scanner = new Scanner(System.in);
