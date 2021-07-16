@@ -4,6 +4,8 @@ los muestre por pantalla en orden descendente.
  */
 package com.egg.lgutierrez.ejercicios;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Luis
@@ -11,7 +13,6 @@ package com.egg.lgutierrez.ejercicios;
 public class Ejercicio22 {
     
     private int [] vector = new int [100];
-    private int [] vectorDescendente = new int [100];
 
     public int[] getVector() {
         return vector;
@@ -20,18 +21,22 @@ public class Ejercicio22 {
     public void setVector(int[] vector) {
         this.vector = vector;
     }
-
-    public int[] getVectorDescendente() {
-        return vectorDescendente;
-    }
-
-    public void setVectorDescendente(int[] vectorDescendente) {
-        this.vectorDescendente = vectorDescendente;
-    }
     
     public void llenarVector (){
-        for (int i = 0; i < 20; i++) {
-            
+        for (int i = 0; i < 100; i++) {
+            this.getVector()[i] = i; 
         }
+    }
+    
+    public void muestraVector (){
+        for (int i = 99; i >= 0;i--) {
+            System.out.println(this.getVector()[i]);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Ejercicio22 ejer22 = new Ejercicio22();
+        ejer22.llenarVector();
+        ejer22.muestraVector();
     }
 }
