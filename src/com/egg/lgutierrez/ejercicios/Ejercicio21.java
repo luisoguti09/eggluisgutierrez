@@ -67,6 +67,8 @@ public class Ejercicio21 {
         ejer21.candidadEuros();
         ejer21.elijaDivisa();
         ejer21.convertirDivisa();
+        
+
 
     }
 
