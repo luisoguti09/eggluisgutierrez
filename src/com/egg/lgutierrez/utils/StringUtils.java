@@ -27,4 +27,10 @@ public class StringUtils {
         System.out.println("Ingresá una frase");
         return scanner.nextLine();
     }
+        
+        public static String pedirRespuestaString(){
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Ingresá tu respuesta");
+        return scanner.nextLine();
+    }
 }
