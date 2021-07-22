@@ -23,10 +23,16 @@ public class StringUtils {
         }    
         
         public static String pedirFrase(){
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Ingresá una frase");
-        return scanner.nextLine();
-    }
+            Scanner scanner = new Scanner (System.in);
+            System.out.println("Ingresá una frase");
+            return scanner.nextLine();
+        }
+        
+         public static String pedirFraseCustom(String frase){
+            Scanner scanner = new Scanner (System.in);
+            System.out.println(frase);
+            return scanner.nextLine();
+        }
         
         public static String pedirRespuestaString(){
         Scanner scanner = new Scanner (System.in);
