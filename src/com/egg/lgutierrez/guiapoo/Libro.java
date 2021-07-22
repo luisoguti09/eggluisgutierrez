@@ -22,6 +22,16 @@ public class Libro {
         return titulo;
     }
 
+    public Libro() {
+    }
+
+    public Libro(String titulo, String autor, int paginas, int isbn) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+        this.isbn = isbn;
+    }
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -50,7 +60,7 @@ public class Libro {
         this.isbn = isbn;
     }
     
-    public void llenarLibro(){
+   /* public void llenarLibro(){
         System.out.println("A continuación ingrese el autor");
        this.setAutor(StringUtils.pedirRespuestaString());
        System.out.println("A continuación ingrese el Título");
@@ -59,7 +69,7 @@ public class Libro {
        this.setPaginas(MathUtils.pedirNumero());
        System.out.println("A continuación ingrese el ISBN");
        this.setIsbn(MathUtils.pedirNumero());
-    }
+    }*/
     
     public void muestraLibro(){
         System.out.println("El autor se llama: " + this.getAutor());
@@ -69,8 +79,14 @@ public class Libro {
     }
      
     public static void main(String[] args) {
-        Libro libro = new Libro();
-        libro.llenarLibro();
+        Libro libro = new Libro(StringUtils.pedirFraseCustom("pedir titulo: "), StringUtils.pedirFraseCustom("pedir autor: "), MathUtils.pedirNumeroCustom("pedir paginas "), MathUtils.pedirNumeroCustom("pedir isbn "));
+        //libro.llenarLibro();
+        libro.muestraLibro();
+        String correcto = StringUtils.pedirFraseCustom("datos correctos? S / N");
+        if (correcto.equalsIgnoreCase("N")) {
+            libro.setPaginas(MathUtils.pedirNumeroCustom("corregir cantidad de paginas: "));
+        
+        }
         libro.muestraLibro();
     }
 }
