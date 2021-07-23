@@ -50,12 +50,15 @@ public class Circunferencia {
         return perimetro;
     }
     
+    public void muestraTodo(){
+        System.out.println("El Radio es: " + this.crearCircunferencia());
+        System.out.println("El Area es: " + this.area());
+        System.out.println("El Perímetro es: " + this.perimetro());
+    }
     
     public static void main(String[] args) {
         Circunferencia circus = new Circunferencia();
-        circus.crearCircunferencia();
-        circus.area();
-        circus.perimetro();
+        circus.muestraTodo();
     }
      
     
