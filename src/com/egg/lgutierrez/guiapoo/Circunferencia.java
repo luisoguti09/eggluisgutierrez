@@ -41,7 +41,7 @@ public class Circunferencia {
     }
     
     public double area(){
-        double area = Math.PI * this.getRadio();
+        double area = Math.PI * Math.pow(this.getRadio(), radio);
         return area;
     }  
     
