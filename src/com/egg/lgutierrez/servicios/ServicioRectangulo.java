@@ -7,7 +7,7 @@ perímetro del rectángulo. Por último, tendremos un método que dibujará el
 rectángulo mediante asteriscos usando la base y la altura. Se deberán además definir
 los métodos getters, setters y constructores correspondientes.
  */
-package Servicios;
+package com.egg.lgutierrez.servicios;
 
 import com.egg.lgutierrez.utils.MathUtils;
 
@@ -16,8 +16,7 @@ import com.egg.lgutierrez.utils.MathUtils;
  * @author Luis
  */
 public class ServicioRectangulo {
-    
-    private 
+     
     /**
      *
      */
@@ -48,35 +47,35 @@ public class ServicioRectangulo {
         return superficie;
     }
     
-    public static int mostrarRect(int altura; int base) {
-        for (int i = 0; i < altura; i++) {
-            for (int j = 0; j < this.getN(); j++) {
+    public static void mostrarRectangulo(int altura, int base){
+        for (int i = 0; i < base; i++) {
+            for (int j = 0; j < altura; j++) {
                 if ( i == 0 ) {
                     System.out.print("*");
-                    if (j == this.getN()-1)
+                    if (j == altura-1)
                         System.out.println();
                     
                 }  else {
                     if (j == 0 ){
                         System.out.print("*");
-                    } else if (j == this.getN()-1){
+                    } else if (j == altura-1){
                         System.out.println("*");
                         
                     } else {
-                        if(i!=this.getN()-1){
+                        if(i!=base-1){
                              System.out.print(" ");
                         }
                        
                     }
                 }
-                if(i==this.getN()-1) {
-                    if(j!=0 && j!= this.getN()-1){
+                if(i==base-1) {
+                    if(j!=0 && j!= altura-1){
                         System.out.print("*");
                     }
                 }
                          
             }
         }
-
     }
+    
 }
