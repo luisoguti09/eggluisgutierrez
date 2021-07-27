@@ -13,6 +13,8 @@ B. Pasaje por Referencia y por Valor en Java
  */
 package com.egg.lgutierrez.guiapoo;
 
+import Servicios.ServicioRectangulo;
+
 /**
  *
  * @author Luis
@@ -47,7 +49,12 @@ public class Rectangulo {
     
     public static void main(String[] args) {
         Rectangulo rect = new Rectangulo();
-        rect.setAltura(ServicioRectangulo);
+        rect.setAltura(ServicioRectangulo.pedirAltura());
+        rect.setBase(ServicioRectangulo.pedirBase());
+        System.out.println("El rectángulo es de " + rect.getAltura()+ " x " + rect.getBase());
+        System.out.println("El perimetro es: " + ServicioRectangulo.definirPerimetro(rect.getAltura(), rect.getBase()));
+        System.out.println("El perimetro es: " + ServicioRectangulo.calcularSuperficie(rect.getAltura(), rect.getBase()));
+        
     }
     
 }

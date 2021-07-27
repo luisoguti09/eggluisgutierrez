@@ -17,25 +17,66 @@ import com.egg.lgutierrez.utils.MathUtils;
  */
 public class ServicioRectangulo {
     
-    public void pedirBase(){
+    private 
+    /**
+     *
+     */
+    public static int pedirBase(){
         int base;
         System.out.println("Ahora te pediremos que ingreses el tamaño de la base");
         base = MathUtils.pedirNumero();
-        
+        return base;
         
     }
     
-    public void pedirAltura(){
+    public static int pedirAltura(){
         int altura;
         System.out.println("Ahora te pediremos que ingreses el tamaño de la altura");
         altura = MathUtils.pedirNumero();
+        return altura;
     }
    
     
-    public int creaectangulo(){
-        
-        
-        return 0;
+    public static int definirPerimetro(int altura, int base){
+        int perimetro;
+        perimetro = (base * 2) + (altura *2);
+        return perimetro;
     }
     
+    public static int calcularSuperficie (int altura, int base){
+        int superficie = base * altura;
+        return superficie;
+    }
+    
+    public static int mostrarRect(int altura; int base) {
+        for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < this.getN(); j++) {
+                if ( i == 0 ) {
+                    System.out.print("*");
+                    if (j == this.getN()-1)
+                        System.out.println();
+                    
+                }  else {
+                    if (j == 0 ){
+                        System.out.print("*");
+                    } else if (j == this.getN()-1){
+                        System.out.println("*");
+                        
+                    } else {
+                        if(i!=this.getN()-1){
+                             System.out.print(" ");
+                        }
+                       
+                    }
+                }
+                if(i==this.getN()-1) {
+                    if(j!=0 && j!= this.getN()-1){
+                        System.out.print("*");
+                    }
+                }
+                         
+            }
+        }
+
+    }
 }
