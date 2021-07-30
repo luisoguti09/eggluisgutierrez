@@ -29,6 +29,12 @@ public class MathUtils {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresá la nota");
         return scanner.nextInt(); 
-    }  
+    } 
+    
+    public static double pedirNumeroDouble(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresá un número");
+        return scanner.nextDouble();
+    }
     
 }

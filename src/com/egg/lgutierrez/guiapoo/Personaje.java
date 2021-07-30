@@ -1,5 +1,5 @@
 /*
- * 7. Realizar una clase llamada Persona que tenga los siguientes atributos: nombre, edad,
+ * 7. Realizar una clase llamada Personaje que tenga los siguientes atributos: nombre, edad,
 sexo ('H' hombre, 'M' mujer, 'O' otro), peso y altura. Si el alumno desea añadir algún
 otro atributo, puede hacerlo. Los métodos que se implementarán son:
 • Un constructor por defecto.
@@ -7,7 +7,7 @@ otro atributo, puede hacerlo. Los métodos que se implementarán son:
 • Métodos getters y setters de cada atributo.
 • Metodo crearPersona(): el método crear persona, le pide los valores de los atributos
 al usuario y después se le asignan a sus respectivos atributos para llenar el objeto
-Persona. Además, comprueba que el sexo introducido sea correcto, es decir, H, M o
+Personaje. Además, comprueba que el sexo introducido sea correcto, es decir, H, M o
 O. Si no es correcto se deberá mostrar un mensaje
 • Método calcularIMC(): calculara si la persona está en su peso ideal (peso en
 kg/(altura^2 en mt2)). Si esta fórmula da por resultado un valor menor que 20, la
@@ -19,7 +19,7 @@ hacer uso de constantes para devolver estos valores.
 • Método esMayorDeEdad(): indica si la persona es mayor de edad. La función
 devuelve un booleano.
 A continuación, en la clase main hacer lo siguiente:
-Crear 4 objetos de tipo Persona con distintos valores, a continuación, llamaremos todos
+Crear 4 objetos de tipo Personaje con distintos valores, a continuación, llamaremos todos
 los métodos para cada objeto, deberá comprobar si la persona está en su peso ideal,
 tiene sobrepeso o está por debajo de su peso ideal e indicar para cada objeto si la
 persona es mayor de edad.
@@ -35,10 +35,66 @@ package com.egg.lgutierrez.guiapoo;
  *
  * @author Luis
  */
-public class Persona {
-    
-  
+public class Personaje  {
+    private String nombre;
+     private String apellido;
+    private int edad;
 
+    public Personaje() {
+    }
+
+    public Personaje(String nombre, String apellido, int edad) {
+        super();
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    public Personaje(String nombre) {
+        super();
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+   
+    public static void main(String[] args) {
+        Personaje p1 = new Personaje();
+        p1.setNombre("luis");
+        
+        Personaje p2 = new Personaje("diego");
+        
+        Personaje p3 = new Personaje("agostina", "gutierrez", 10);
+        
+        
+        System.out.println("nombre p1 " + p1.getNombre());
+        System.out.println("apellido p1" + p1.getApellido());
+         System.out.println("nombre p2 " + p2.getNombre());
+         System.out.println("nombre p2 " + p2.getApellido());
+          System.out.println("nombre p3 " + p3.getNombre());
+          System.out.println("nombre p3 " + p3.getApellido());
+    }
     
     
 }

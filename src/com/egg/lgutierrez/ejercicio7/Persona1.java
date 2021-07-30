@@ -29,16 +29,60 @@ personas cuantas están por debajo de su peso, cuantas en su peso ideal y cuanto
 encima, y también calcularemos un porcentaje de cuantos son mayores de edad y
 cuantos menores.
  */
-package com.egg.lgutierrez.guiapoo;
+package com.egg.lgutierrez.ejercicio7;
 
 /**
  *
  * @author Luis
  */
-public class Persona {
-    
-  
+public class Persona1 {
 
-    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        final int imc1,imc2,imc3,imc4;
+        int mayor = 0;
+        int menor = 0;
+        ServicePersona p1 = new ServicePersona();
+        ServicePersona p2 = new ServicePersona();
+        ServicePersona p3 = new ServicePersona();
+        ServicePersona p4 = new ServicePersona();
+        p1.crearPersona();
+        imc1 = p1.calcularIMC();
+        if(p1.mayorEdad()== true){
+            mayor ++;  
+        }else{
+            menor++;
+        }
+        
+        p2.crearPersona();
+        imc2 = p2.calcularIMC();
+        if(p1.mayorEdad()== true){
+            mayor ++;  
+        }else{
+            menor++;
+        }
+        
+        p3.crearPersona();
+        imc3 = p3.calcularIMC();
+        if(p3.mayorEdad()== true){
+            mayor ++;  
+        }else{
+            menor++;
+        }
+        
+        p4.crearPersona();
+        imc4 = p4.calcularIMC();
+        if(p4.mayorEdad()== true){
+            mayor ++;  
+        }else{
+            menor++;
+        }
+        
+        System.out.println(p1.p1.getEdad());
+        System.out.println(p2.p1.getEdad());
+    }
     
 }

@@ -29,16 +29,63 @@ personas cuantas están por debajo de su peso, cuantas en su peso ideal y cuanto
 encima, y también calcularemos un porcentaje de cuantos son mayores de edad y
 cuantos menores.
  */
-package com.egg.lgutierrez.guiapoo;
+package com.egg.lgutierrez.ejercicio7;
+
+import com.egg.lgutierrez.guiapoo.entidades.EntidadPersona;
+import com.egg.lgutierrez.utils.MathUtils;
+import com.egg.lgutierrez.utils.StringUtils;
 
 /**
  *
  * @author Luis
  */
-public class Persona {
-    
-  
+public class ServicePersona {
 
-    
-    
+    EntidadPersona1 p1 = new EntidadPersona1();
+
+    public void crearPersona() {
+        System.out.println("Buenas! por favor ingrese el Nombre de la persona");
+        p1.setNombre(StringUtils.pedirRespuestaString());
+        System.out.println("Ahora ingrese su edad");
+        p1.setEdad(MathUtils.pedirNumero());
+        System.out.println("Ingrese el sexo");
+        System.out.println("Para Hombre H para Mujer M y otro O");
+        do {
+            p1.setSexo(StringUtils.pedirRespuestaString());
+            if (!p1.getSexo().equalsIgnoreCase("m") && !p1.getSexo().equalsIgnoreCase("h") && !p1.getSexo().equalsIgnoreCase("o")) {
+                System.out.println("Esa opción no está en las permitidas vuelva a intentarlo");
+            }
+
+        } while (!p1.getSexo().equalsIgnoreCase("m") && !p1.getSexo().equalsIgnoreCase("h") && !p1.getSexo().equalsIgnoreCase("o"));
+        System.out.println("Ingresá la altura");
+        p1.setAltura(MathUtils.pedirNumero());
+        System.out.println("Ahora sin temor igrese su peso");
+        p1.setPeso(MathUtils.pedirNumeroDouble());
+
+    }
+
+    public int calcularIMC() {
+        double resultado = p1.getPeso() / (Math.pow(p1.getAltura(), 2));
+
+        if (resultado < 20) {
+            System.out.println("Entrale a la olla sin temor");
+            return -1;
+        } else {
+            if (resultado >= 20 && resultado <= 25) {
+                System.out.println("Estas en tu peso ideal");
+                return 0;
+            } else {
+                System.out.println("Estas con sobre peso");
+
+                return 1;
+            }
+        }
+    }
+
+    public boolean mayorEdad() {
+        boolean esMayor;
+        esMayor = p1.getEdad() >= 18; 
+        return esMayor;
+    }
+
 }

@@ -29,16 +29,23 @@ personas cuantas están por debajo de su peso, cuantas en su peso ideal y cuanto
 encima, y también calcularemos un porcentaje de cuantos son mayores de edad y
 cuantos menores.
  */
-package com.egg.lgutierrez.guiapoo;
+package com.egg.lgutierrez.servicios;
+
+import com.egg.lgutierrez.guiapoo.entidades.EntidadPersona;
+import com.egg.lgutierrez.utils.StringUtils;
 
 /**
  *
  * @author Luis
  */
-public class Persona {
+public class ServicioPersona {
     
-  
-
+    EntidadPersona p1 = new EntidadPersona();
     
+    public void crearPersona (){
+        System.out.println("Buenas! por favor ingrese el Nombre de la persona");
+        p1 (StringUtils.pedirRespuestaString());
+    }
+ 
     
 }
