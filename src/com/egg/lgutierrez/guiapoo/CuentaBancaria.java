@@ -99,8 +99,7 @@ public class CuentaBancaria {
         cta.setSaldoActual(ServicioCuentaBancaria.extraccionRapida(cta.getSaldoActual()));
         System.out.println(cta.getSaldoActual());
         System.out.println("Los datos de tu cuenta son los siguientes");
-        cta.mostrarCuenta();
-        
+        cta.mostrarCuenta();        
     }
     
 }
