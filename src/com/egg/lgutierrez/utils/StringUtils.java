@@ -39,4 +39,12 @@ public class StringUtils {
         System.out.println("Ingresá tu respuesta");
         return scanner.nextLine();
     }
+        
+        public static char pedirRespuestaChar(){
+            char a;
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Ingresá tu respuesta");
+        a = scanner.next().charAt(0);
+        return a;
+    }
 }

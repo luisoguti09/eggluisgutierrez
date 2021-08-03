@@ -42,10 +42,7 @@ public class ServicioPersona {
     
     EntidadPersona p1 = new EntidadPersona();
     
-    public void crearPersona (){
-        System.out.println("Buenas! por favor ingrese el Nombre de la persona");
-        p1 (StringUtils.pedirRespuestaString());
-    }
+    
  
     
 }
