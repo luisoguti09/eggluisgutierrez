@@ -80,4 +80,46 @@ public class ServicioCadena {
         System.out.println("El caracter ingresado se contabilizó la siguiente cantidad de veces ");
         return contCaracter; 
     }
+    
+    public static String pedirNuevaFrase() {
+        String fraseNueva = StringUtils.pedirFrase();
+        return fraseNueva;
+    }
+    
+    public static void comparaLongitudes (String frase, String nuevaFrase){
+        
+        int long1 = frase.length();
+        int long2 = nuevaFrase.length();
+        if (long1 == long2){
+            System.out.println("Las longitudes de las frases son iguales");
+        }else{
+            System.out.println("Las longitudes son distintas");
+        }
+    }
+    
+    public static void unirFrases (String frase, String nuevaFrase){
+        StringBuilder sb = new StringBuilder();
+        sb.append("la frase unida es");
+        sb.append(frase);
+        sb.append(nuevaFrase);
+        System.out.println(sb.toString());
+    }
+    
+    public static String elijaCaract (){
+        System.out.println("Cual Caracter quiere ingresar para reemplazar la letra A?");
+        String newChar = StringUtils.pedirRespuestaString();
+        return newChar;
+        
+    }
+    
+    public static boolean contieneChar (String frase, String newChar){
+       return frase.contains(newChar);
+       
+    }
+    
+    public static String reemplazaChar(String frase, String newChar){
+        return frase.replaceAll("a", newChar);
+       
+    }
+    
 }
