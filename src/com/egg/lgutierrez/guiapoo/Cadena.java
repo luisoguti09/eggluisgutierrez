@@ -35,7 +35,7 @@ public class Cadena {
     
     private String frase;
     private char caracter;
-
+    
     public Cadena(char caracter) {
         this.caracter = caracter;
     }
@@ -76,6 +76,7 @@ public class Cadena {
     
     public static void main(String[] args) {
         Cadena cad = new Cadena();
+        String nuevaFrase;
         cad.setFrase(ServicioCadena.pedirFrase());
         cad.setLongitud(ServicioCadena.medirLongitud(cad.getFrase()));
         System.out.println(ServicioCadena.mostrarVocales(cad.getFrase()));
@@ -83,6 +84,20 @@ public class Cadena {
         ServicioCadena.invertirFrase(cad.getFrase());
         cad.setCaracter(ServicioCadena.pedirCaracter());
         System.out.println(ServicioCadena.mostrarCaracter(cad.getFrase(),cad.getCaracter()));
+        nuevaFrase = ServicioCadena.pedirNuevaFrase();
+        ServicioCadena.comparaLongitudes(cad.getFrase(), nuevaFrase);
+        ServicioCadena.unirFrases(cad.getFrase(), nuevaFrase);
+        String newChar = ServicioCadena.elijaCaract();
+        String reemplazado = ServicioCadena.reemplazaChar(cad.getFrase(), newChar);
+        System.out.println(reemplazado);
+        if(ServicioCadena.contieneChar(cad.getFrase(), newChar)){
+            System.out.println("Verdadero");
+        }else{
+            System.out.println("Falso");
+        }
+        
+       
+        
     }
     
 }
