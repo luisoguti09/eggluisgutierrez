@@ -14,10 +14,50 @@ Antes de calcular la raíz cuadrada se debe obtener el valor absoluto del númer
  */
 package com.egg.lgutierrez.guiapoo;
 
+import com.egg.lgutierrez.servicios.ServicioMatematicas;
+
 /**
  *
  * @author Luis
  */
 public class Matematicas {
+    
+    private double n1,n2;
+
+    public Matematicas() {
+    }
+
+    public Matematicas(double n1, double n2) {
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+
+    public double getN1() {
+        return n1;
+    }
+
+    public void setN1(double n1) {
+        this.n1 = n1;
+    }
+
+    public double getN2() {
+        return n2;
+    }
+
+    public void setN2(double n2) {
+        this.n2 = n2;
+    }
+    
+    public static void main(String[] args) {
+        
+        Matematicas math = new Matematicas();
+        math.setN1(Math.random());
+        System.out.println(math.getN1());
+        math.setN2(Math.random());
+        System.out.println(math.getN2());
+        ServicioMatematicas.devolverMayor(math.getN2(), math.getN1());
+        ServicioMatematicas.calcularPotencia(math.getN1(), math.getN2());
+        ServicioMatematicas.calcularRaizCuad(math.getN1(),math.getN2());
+    }
     
 }
