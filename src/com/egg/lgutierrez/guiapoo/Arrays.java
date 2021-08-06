@@ -9,6 +9,8 @@ elementos y el combinado de 20.
  */
 package com.egg.lgutierrez.guiapoo;
 
+import com.egg.lgutierrez.servicios.ServicioArrays;
+
 /**
  *
  * @author Luis
@@ -39,7 +41,10 @@ public class Arrays {
     
     public static void main(String[] args) {
         
-        Arrays arry = new Arrays();
+        Arrays array = new Arrays();
+        array.setVectorA(ServicioArrays.rellenarVectorA(array.getVectorA()));
+        
+        
         
     }
     

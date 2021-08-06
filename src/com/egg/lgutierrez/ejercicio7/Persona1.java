@@ -75,7 +75,7 @@ public class Persona1 {
         
         p4.crearPersona();
         imc4 = p4.calcularIMC();
-        if(p4.mayorEdad()== true){
+        if(p4.mayorEdad() == true){
             mayor ++;  
         }else{
             menor++;
@@ -84,5 +84,5 @@ public class Persona1 {
         System.out.println(p1.p1.getEdad());
         System.out.println(p2.p1.getEdad());
     }
-    
+        
 }

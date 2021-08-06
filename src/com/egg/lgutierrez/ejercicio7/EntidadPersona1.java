@@ -10,7 +10,7 @@ package com.egg.lgutierrez.ejercicio7;
  * @author Luis
  */
 public class EntidadPersona1 {
-    private int edad;
+   private int edad;
    private double altura, peso;
    private String sexo, nombre;
    

@@ -15,10 +15,13 @@ package com.egg.lgutierrez.servicios;
  */
 public class ServicioArrays {
     
-    public void rellenarVectorA (double vectorA[]){
-        for (int i = 0; i < vectorA.length; i ++){
-            System.out.print(vectorA[i]);
-        }  
+    public static double[] rellenarVectorA (double vectorA[]){
+        for ( int i = 0; i < vectorA.length; i ++){ 
+            vectorA[i] = Math.random();
+        } 
+        return vectorA;
     }
+    
+    
     
 }
