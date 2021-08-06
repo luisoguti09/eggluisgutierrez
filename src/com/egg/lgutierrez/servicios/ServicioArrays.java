@@ -9,6 +9,9 @@ elementos y el combinado de 20.
  */
 package com.egg.lgutierrez.servicios;
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
+
 /**
  *
  * @author Luis
@@ -18,9 +21,40 @@ public class ServicioArrays {
     public static double[] rellenarVectorA (double vectorA[]){
         for ( int i = 0; i < vectorA.length; i ++){ 
             vectorA[i] = Math.random();
+            DecimalFormat format = new DecimalFormat("#.00");
+            System.out.println(format.format(vectorA[i]));
         } 
         return vectorA;
     }
+    
+    public static double[] ordenarVector (double vectorA[]){
+        Arrays.sort(vectorA);
+        for ( int i = 0; i < vectorA.length; i ++){ 
+            DecimalFormat format = new DecimalFormat("#.00");
+            System.out.println(format.format(vectorA[i]));
+        } 
+        return vectorA;
+    }
+    
+    public static double[] copiarVector (double vectorA[], double vectorB[]){
+        Arrays.copyOf(vectorA, 9);
+        for ( int i = 0; i < 10; i ++){ 
+            DecimalFormat format = new DecimalFormat("#.00");
+            System.out.println(format.format(vectorB[i]));
+        } 
+        return vectorB;
+    }
+    
+    public static double[] llenarVectorB (double vectorB[]){
+        Arrays.fill(vectorB, 0.5);
+        for ( int i = 10; i < vectorB.length; i ++){ 
+            DecimalFormat format = new DecimalFormat("#.00");
+            System.out.println(format.format(vectorB[i]));
+        } 
+        return vectorB;
+    }
+    
+    
     
     
     

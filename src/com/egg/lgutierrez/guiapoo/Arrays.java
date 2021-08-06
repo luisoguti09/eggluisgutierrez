@@ -43,6 +43,12 @@ public class Arrays {
         
         Arrays array = new Arrays();
         array.setVectorA(ServicioArrays.rellenarVectorA(array.getVectorA()));
+        System.out.println("Ahora mostraremos el vector Ordenado");
+        array.setVectorA(ServicioArrays.ordenarVector(array.getVectorA()));
+        System.out.println("Ahora copiaremos los primeros 10 numeros del VectorA al VectorB");
+        array.setVectorB(ServicioArrays.copiarVector(array.getVectorA(),array.getVectorB()));
+        System.out.println("Vector B con el resto de los números");
+        array.setVectorB(ServicioArrays.llenarVectorB(array.getVectorB()));
         
         
         
