@@ -9,6 +9,7 @@ package com.egg.lgutierrez.guiacolecciones.ejercicios;
 
 import com.egg.lgutierrez.guiacolecciones.servicios.ServicioFabricaDePerros;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -17,15 +18,15 @@ import java.util.ArrayList;
 public class FabricaDePerros {
     
     private String raza, nombre;
-    private ArrayList <ServicioFabricaDePerros> mascotas;
+    private ArrayList <String> mascotas;
 
-    public FabricaDePerros(String raza, String nombre, ArrayList<ServicioFabricaDePerros> mascotas) {
+    public FabricaDePerros() {
+    }
+
+    public FabricaDePerros(String raza, String nombre, ArrayList<String> mascotas) {
         this.raza = raza;
         this.nombre = nombre;
         this.mascotas = mascotas;
-    }
-
-    public FabricaDePerros() {
     }
 
     public String getRaza() {
@@ -44,16 +45,22 @@ public class FabricaDePerros {
         this.nombre = nombre;
     }
 
-    public ArrayList<ServicioFabricaDePerros> getMascotas() {
+    public ArrayList<String> getMascotas() {
         return mascotas;
     }
 
-    public void setMascotas(ArrayList<ServicioFabricaDePerros> mascotas) {
+    public void setMascotas(ArrayList<String> mascotas) {
         this.mascotas = mascotas;
     }
+
+    
     public static void main(String[] args) {
+        
+        
         FabricaDePerros fab = new FabricaDePerros();
-        fab.setRaza(ServicioFabricaDePerros.crearRaza());
+        ServicioFabricaDePerros.crearRaza();
+        ServicioFabricaDePerros.mostrarRaza(fab.getRaza(),fab.getNombre());
+        
         
     }
 }

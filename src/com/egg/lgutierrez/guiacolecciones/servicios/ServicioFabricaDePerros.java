@@ -14,31 +14,30 @@ import java.util.ArrayList;
  */
 public class ServicioFabricaDePerros {
     
-    public static String crearRaza() {
+    public static void crearRaza() {
+        String respuesta;    
         boolean salir = false;
-        String respuesta;
-            System.out.println("Escriba la raza de su mascota");
-            String raza = StringUtils.pedirRespuestaString();
-            System.out.println("Escriba el nombre de su mascota");
-            String nombre = StringUtils.pedirRespuestaString();
-            String mascota = raza + " " + nombre;
-
-        return mascota;   
-    }
-    
-    public static void mostrarPesho(){
-        
+        do{
+            System.out.println("Desea agregar otro Perro?");
+            System.out.println("Responda con si o no");
+            respuesta = StringUtils.pedirRespuestaString();
+            if (respuesta.equalsIgnoreCase("si") ){
+                salir = true;
+                System.out.println("Escriba la raza de su mascota");
+                String raza = StringUtils.pedirRespuestaString();
+                System.out.println("Escriba el nombre de su mascota");
+                String nombre = StringUtils.pedirRespuestaString();  
+                String mascota = raza + " " + nombre;              
+            }else{
+                System.out.println("Hasta la próxima");
+            }
+        }while (salir);
     }
            
     public static void mostrarRaza (String raza, String nombre){
-        boolean salir = false;
-        String respuesta;
-        do{
-            System.out.println("Desea agregar otra mascota?");
+        
         System.out.println("Usted ha ingresado los siguientes datos: ");
         System.out.println("Raza: " + raza);
-        System.out.println("Nombre: " + nombre);
-        }while(salir);
-    }
+        System.out.println("Nombre: " + nombre); 
     }
 }
