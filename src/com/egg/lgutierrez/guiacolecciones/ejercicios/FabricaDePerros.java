@@ -13,4 +13,6 @@ package com.egg.lgutierrez.guiacolecciones.ejercicios;
  */
 public class FabricaDePerros {
     
+    private String raza, nombre;
+    private ArrayList <ServicioMascota> mscotas;
 }
