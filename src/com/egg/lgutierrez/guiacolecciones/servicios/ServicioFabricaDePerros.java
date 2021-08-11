@@ -13,31 +13,44 @@ import java.util.ArrayList;
  * @author Luis
  */
 public class ServicioFabricaDePerros {
+    private ArrayList <String> mascotas;
     
-    public static void crearRaza() {
+    public static ArrayList crearRaza(ArrayList mascotas) {
         String respuesta;    
         boolean salir = false;
         do{
-            System.out.println("Desea agregar otro Perro?");
-            System.out.println("Responda con si o no");
-            respuesta = StringUtils.pedirRespuestaString();
-            if (respuesta.equalsIgnoreCase("si") ){
-                salir = true;
-                System.out.println("Escriba la raza de su mascota");
+            System.out.println("Escriba la raza de su mascota");
                 String raza = StringUtils.pedirRespuestaString();
                 System.out.println("Escriba el nombre de su mascota");
                 String nombre = StringUtils.pedirRespuestaString();  
-                String mascota = raza + " " + nombre;              
+                String mascota = raza + " " + nombre;
+                mascotas.add(mascota);
+            System.out.println("Desea agregar otro Perro?");
+            System.out.println("Responda con si o no");
+            respuesta = StringUtils.pedirRespuestaString();
+            if (respuesta.equalsIgnoreCase("no") ){
+                salir = true;
+                break;
             }else{
-                System.out.println("Hasta la próxima");
+                System.out.println("Escriba la raza de su mascota");
+                 raza = StringUtils.pedirRespuestaString();
+                System.out.println("Escriba el nombre de su mascota");
+                 nombre = StringUtils.pedirRespuestaString();  
+                 mascota = raza + " " + nombre;
+                mascotas.add(mascota);
+                break;
             }
         }while (salir);
+        return mascotas;
     }
            
-    public static void mostrarRaza (String raza, String nombre){
-        
+    public static ArrayList mostrarRaza (ArrayList mascotas){
+       
         System.out.println("Usted ha ingresado los siguientes datos: ");
-        System.out.println("Raza: " + raza);
-        System.out.println("Nombre: " + nombre); 
+        for(Object aux : mascotas){
+            System.out.println(mascotas);
+        } 
+        return mascotas;
     }
+    
 }

@@ -55,11 +55,12 @@ public class FabricaDePerros {
 
     
     public static void main(String[] args) {
-        
+        ServicioFabricaDePerros isaura = new ServicioFabricaDePerros();
         
         FabricaDePerros fab = new FabricaDePerros();
-        ServicioFabricaDePerros.crearRaza();
-        ServicioFabricaDePerros.mostrarRaza(fab.getRaza(),fab.getNombre());
+        fab.setMascotas(ServicioFabricaDePerros.crearRaza(fab.getMascotas()));
+        fab.setMascotas(ServicioFabricaDePerros.mostrarRaza(fab.getMascotas()));
+        
         
         
     }
