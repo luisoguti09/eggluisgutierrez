@@ -13,44 +13,49 @@ import java.util.ArrayList;
  * @author Luis
  */
 public class ServicioFabricaDePerros {
-    private ArrayList <String> mascotas;
-    
-    public static ArrayList crearRaza(ArrayList mascotas) {
-        String respuesta;    
+
+    private static ArrayList<String> mascotas = new ArrayList();
+
+    public static ArrayList crearRaza() {
+        String respuesta, mascota;
         boolean salir = false;
-        do{
+        do {
             System.out.println("Escriba la raza de su mascota");
-                String raza = StringUtils.pedirRespuestaString();
-                System.out.println("Escriba el nombre de su mascota");
-                String nombre = StringUtils.pedirRespuestaString();  
-                String mascota = raza + " " + nombre;
-                mascotas.add(mascota);
+            String raza = StringUtils.pedirRespuestaString();
+            System.out.println("Escriba el nombre de su mascota");
+            String nombre = StringUtils.pedirRespuestaString();
+            mascota = raza + " " + nombre;
+            mascotas.add(mascota);
             System.out.println("Desea agregar otro Perro?");
             System.out.println("Responda con si o no");
             respuesta = StringUtils.pedirRespuestaString();
-            if (respuesta.equalsIgnoreCase("no") ){
+            if (respuesta.equalsIgnoreCase("no")) {
                 salir = true;
                 break;
-            }else{
+            } else {
                 System.out.println("Escriba la raza de su mascota");
-                 raza = StringUtils.pedirRespuestaString();
+                raza = StringUtils.pedirRespuestaString();
                 System.out.println("Escriba el nombre de su mascota");
-                 nombre = StringUtils.pedirRespuestaString();  
-                 mascota = raza + " " + nombre;
+                nombre = StringUtils.pedirRespuestaString();
+                mascota = raza + " " + nombre;
                 mascotas.add(mascota);
                 break;
             }
-        }while (salir);
+        } while (salir);
         return mascotas;
     }
-           
-    public static ArrayList mostrarRaza (ArrayList mascotas){
-       
+
+    public static ArrayList<String> getMascotas() {
+        return mascotas;
+    }
+
+    public static ArrayList mostrarRaza(ArrayList mascotas) {
+
         System.out.println("Usted ha ingresado los siguientes datos: ");
-        for(Object aux : mascotas){
+        for (Object aux : mascotas) {
             System.out.println(mascotas);
-        } 
+        }
         return mascotas;
     }
-    
+
 }

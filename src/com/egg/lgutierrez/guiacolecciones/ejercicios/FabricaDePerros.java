@@ -18,7 +18,7 @@ import java.util.List;
 public class FabricaDePerros {
     
     private String raza, nombre;
-    private ArrayList <String> mascotas;
+    private List mascotas;
 
     public FabricaDePerros() {
     }
@@ -26,7 +26,7 @@ public class FabricaDePerros {
     public FabricaDePerros(String raza, String nombre, ArrayList<String> mascotas) {
         this.raza = raza;
         this.nombre = nombre;
-        this.mascotas = mascotas;
+        this.mascotas = new ArrayList();
     }
 
     public String getRaza() {
@@ -45,9 +45,11 @@ public class FabricaDePerros {
         this.nombre = nombre;
     }
 
-    public ArrayList<String> getMascotas() {
+    public List getMascotas() {
         return mascotas;
     }
+
+    
 
     public void setMascotas(ArrayList<String> mascotas) {
         this.mascotas = mascotas;
@@ -55,11 +57,11 @@ public class FabricaDePerros {
 
     
     public static void main(String[] args) {
-        ServicioFabricaDePerros isaura = new ServicioFabricaDePerros();
-        
+       
         FabricaDePerros fab = new FabricaDePerros();
-        fab.setMascotas(ServicioFabricaDePerros.crearRaza(fab.getMascotas()));
-        fab.setMascotas(ServicioFabricaDePerros.mostrarRaza(fab.getMascotas()));
+                
+        fab.setMascotas(ServicioFabricaDePerros.crearRaza());
+        fab.setMascotas(ServicioFabricaDePerros.mostrarRaza((ArrayList) fab.getMascotas()));
         
         
         
