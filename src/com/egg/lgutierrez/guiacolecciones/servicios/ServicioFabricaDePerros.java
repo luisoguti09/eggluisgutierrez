@@ -5,8 +5,10 @@
  */
 package com.egg.lgutierrez.guiacolecciones.servicios;
 
+import static com.egg.lgutierrez.guiacolecciones.servicios.ServicioFabricaDePerros.crearRaza;
 import com.egg.lgutierrez.utils.StringUtils;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -57,5 +59,30 @@ public class ServicioFabricaDePerros {
         }
         return mascotas;
     }
+    
+    public static ArrayList buscarPerro (ArrayList mascotas){
+        String nombre,m;
+        System.out.println("Ingrese el nombre de un perro a buscar");
+        nombre = StringUtils.pedirRespuestaString();
+        for (int i = 0; i < mascotas.size(); i++) {
+             if (mascotas.contains(nombre)){
+                 mascotas.remove(nombre);
+             }        
+        }
+        return mascotas;
+    }
+
+    public static void eliminaPesho(ArrayList mascotas){
+        Iterator <String> it = (Iterator <String>) new ServicioFabricaDePerros();
+        while (it.hasNext()){
+            String aux = it.next();
+            
+        }
+    }
+        
+    
+    
+    
+            
 
 }

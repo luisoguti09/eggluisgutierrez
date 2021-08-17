@@ -59,10 +59,12 @@ public class FabricaDePerros {
     public static void main(String[] args) {
        
         FabricaDePerros fab = new FabricaDePerros();
+        ServicioFabricaDePerros fabrica = new ServicioFabricaDePerros();
                 
         fab.setMascotas(ServicioFabricaDePerros.crearRaza());
         fab.setMascotas(ServicioFabricaDePerros.mostrarRaza((ArrayList) fab.getMascotas()));
-        
+        fab.setMascotas(ServicioFabricaDePerros.buscarPerro((ArrayList) fab.getMascotas()));
+        fab.setMascotas(ServicioFabricaDePerros.mostrarRaza((ArrayList) fab.getMascotas()));
         
         
     }
