@@ -5,6 +5,7 @@
  */
 package com.egg.lgutierrez.utils;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -35,6 +36,14 @@ public class MathUtils {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresá un número");
         return scanner.nextDouble();
+    }
+    
+    public static ArrayList pedirNumCustom(String frase){
+        ArrayList numero = new ArrayList();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(frase);
+        numero.add(scanner.nextInt());
+        return numero;
     }
     
 }
