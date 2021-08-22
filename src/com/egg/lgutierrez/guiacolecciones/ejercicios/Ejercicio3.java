@@ -55,7 +55,7 @@ public class Ejercicio3 {
         return respuesta;
     }
     
-    public void mostrarRaza() {
+    public void mostrarAlumno() {
 
         System.out.println("Usted ha ingresado los siguientes datos: ");
         for (Alumno alumno : alumnos) {
@@ -65,7 +65,7 @@ public class Ejercicio3 {
         }
     }
     
-    public int ingresarNotas(){
+  /*  public int ingresarNotas(){
         int n1 = MathUtils.pedirNumeroCustom("Ingrese la nota 1");
         int n2 = MathUtils.pedirNumeroCustom("Ingrese la nota 2");
         int n3 = MathUtils.pedirNumeroCustom("Ingrese la nota 3");
@@ -82,5 +82,6 @@ public class Ejercicio3 {
         }while(salir.equalsIgnoreCase("si"));
         System.out.println("Los alumnos ingresados son");
         
-    }
+    }*/
+
 }
