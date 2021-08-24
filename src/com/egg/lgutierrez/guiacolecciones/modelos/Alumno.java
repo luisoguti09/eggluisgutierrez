@@ -57,13 +57,17 @@ public class Alumno {
         return "Alumno{" + "alumno=" + alumno + ", notas=" + notas + '}';
     }
     
-    public void pedirNotas(String Alumno){
+    public void pedirNotas(ArrayList<Alumno> alumnos){
         
-        this.setNotas(MathUtils.pedirNumCustom("Ahora ingrese la primer nota del Alumno"));      
-        this.getNotas().add(notas);
-        alum.setNotas(MathUtils.pedirNumCustom("Ahora ingrese la segunda nota del Alumno"));
-        alum.getNotas().add(Integer.SIZE);
-        alum.setNotas(MathUtils.pedirNumCustom("Ahora ingrese la tercera nota del Alumno"));
-        alum.getNotas().add(Integer.SIZE);
+        for (Alumno alumno : alumnos){
+            int nota = 1;
+            for (int i = 0; i < 3; i++) {
+                alumno.getNotas().add(Integer.valueOf(MathUtils.pedirNumCustom("Ahora ingrese la nota numero: "+ nota +" del Alumno").toString()));
+            }
+        }
+    }
+    
+    public void mostrarNotas (ArrayList <Alumno> alumnos){
+        
     }
 }

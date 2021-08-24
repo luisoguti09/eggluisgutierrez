@@ -14,9 +14,10 @@ package com.egg.lgutierrez.guia.relaciones.modelos;
  */
 public class Persona {
     
-    private String nombre, apellido, perro;
+    private String nombre, apellido;
     private long dni;
     private int edad;
+    private List Perro<Perro>();
 
     public Persona() {
     }
