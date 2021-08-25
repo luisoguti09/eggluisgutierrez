@@ -1,7 +1,7 @@
 /*
  * Realizar un programa para que una Persona pueda adoptar un Perro. Vamos a contar de
-dos clases. Perro, que tendrá como atributos: nombre, raza, edad y tamaño; y la clase
-Persona con atributos: nombre, apellido, edad, documento y Perro.
+dos clases. Perro, que tendrá como atributos: nombrePerro, raza, edad y tamaño; y la clase
+Persona con atributos: nombrePerro, apellido, edad, documento y Perro.
 Ahora deberemos en el main crear dos Personas y dos Perros. Después, vamos a tener
 que pensar la lógica necesaria para asignarle a cada Persona un Perro y por ultimo,
 mostrar desde la clase Persona, la información del Perro y de la Persona.
@@ -14,25 +14,46 @@ package com.egg.lgutierrez.guia.relaciones.modelos;
  */
 public class Perro {
     
-    private String nombre, raza, tamanio;
+    private String nombrePerro, raza, apodo;
     private int edad;
+    private boolean tieneDueño;
+
+    public String getNombrePerro() {
+        return nombrePerro;
+    }
+
+    public void setNombrePerro(String nombrePerro) {
+        this.nombrePerro = nombrePerro;
+    }
+
+    public boolean isTieneDueño() {
+        return tieneDueño;
+    }
+
+    public void setTieneDueño(boolean tieneDueño) {
+        this.tieneDueño = tieneDueño;
+    }
+
+    public Perro(boolean tieneDueño) {
+        this.tieneDueño = tieneDueño;
+    }
 
     public Perro() {
     }
 
-    public Perro(String nombre, String raza, String tamanio, int edad) {
-        this.nombre = nombre;
+    public Perro(String nombre, String raza, String apodo, int edad) {
+        this.nombrePerro = nombre;
         this.raza = raza;
-        this.tamanio = tamanio;
+        this.apodo = apodo;
         this.edad = edad;
     }
 
     public String getNombre() {
-        return nombre;
+        return nombrePerro;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombrePerro = nombre;
     }
 
     public String getRaza() {
@@ -43,12 +64,12 @@ public class Perro {
         this.raza = raza;
     }
 
-    public String getTamanio() {
-        return tamanio;
+    public String getApodo() {
+        return apodo;
     }
 
-    public void setTamanio(String tamanio) {
-        this.tamanio = tamanio;
+    public void setApodo(String apodo) {
+        this.apodo = apodo;
     }
 
     public int getEdad() {
@@ -61,8 +82,9 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", tamanio=" + tamanio + ", edad=" + edad + '}';
+        return "Perro{" + "nombrePerro=" + nombrePerro + ", raza=" + raza + ", apodo=" + apodo + ", edad=" + edad + ", tieneDue\u00f1o=" + tieneDueño + '}';
     }
+
     
     
     

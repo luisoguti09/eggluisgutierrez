@@ -8,6 +8,8 @@ mostrar desde la clase Persona, la información del Perro y de la Persona.
  */
 package com.egg.lgutierrez.guia.relaciones.modelos;
 
+import java.util.List;
+
 /**
  *
  * @author Luis
@@ -17,17 +19,17 @@ public class Persona {
     private String nombre, apellido;
     private long dni;
     private int edad;
-    private List Perro<Perro>();
+    private Perro perrito;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String perro, long dni, int edad) {
+    public Persona(String nombre, String apellido, long dni, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.perro = perro;
         this.dni = dni;
         this.edad = edad;
+        
     }
 
     public String getNombre() {
@@ -46,14 +48,6 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getPerro() {
-        return perro;
-    }
-
-    public void setPerro(String perro) {
-        this.perro = perro;
-    }
-
     public long getDni() {
         return dni;
     }
@@ -70,10 +64,26 @@ public class Persona {
         this.edad = edad;
     }
 
+    public Perro getPerrito() {
+        return perrito;
+    }
+
+    public void setPerrito(Perro perrito) {
+        this.perrito = perrito;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", perro=" + perro + ", dni=" + dni + ", edad=" + edad + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", edad=" + edad + ", perrito=" + perrito + '}';
     }
+
+    
+    
+    
+
+    
+
+
     
     
     

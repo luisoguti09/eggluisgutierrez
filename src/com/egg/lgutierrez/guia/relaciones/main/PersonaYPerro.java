@@ -11,5 +11,8 @@ package com.egg.lgutierrez.guia.relaciones.main;
  */
 public class PersonaYPerro {
     
+    public static void main(String[] args) {
+        
+    }
     
 }
