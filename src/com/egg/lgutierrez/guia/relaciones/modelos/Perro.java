@@ -16,7 +16,7 @@ public class Perro {
     
     private String nombrePerro, raza, apodo;
     private int edad;
-    private boolean tieneDueño;
+    private boolean tieneD;
 
     public String getNombrePerro() {
         return nombrePerro;
@@ -27,15 +27,15 @@ public class Perro {
     }
 
     public boolean isTieneDueño() {
-        return tieneDueño;
+        return tieneD;
     }
 
     public void setTieneDueño(boolean tieneDueño) {
-        this.tieneDueño = tieneDueño;
+        this.tieneD = tieneDueño;
     }
 
     public Perro(boolean tieneDueño) {
-        this.tieneDueño = tieneDueño;
+        this.tieneD = tieneDueño;
     }
 
     public Perro() {
@@ -82,8 +82,10 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombrePerro=" + nombrePerro + ", raza=" + raza + ", apodo=" + apodo + ", edad=" + edad + ", tieneDue\u00f1o=" + tieneDueño + '}';
+        return "Perro{" + "nombrePerro=" + nombrePerro + ", raza=" + raza + ", apodo=" + apodo + ", edad=" + edad + ", tieneD=" + tieneD + '}';
     }
+
+    
 
     
     

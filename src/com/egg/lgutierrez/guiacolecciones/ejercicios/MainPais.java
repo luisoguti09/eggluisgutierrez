@@ -42,10 +42,10 @@ public class MainPais {
         String respuesta = StringUtils.pedirFraseCustom("Trump, Typea el pais que deseas buscar y eliminar");
         paises.forEach( (k,v) -> {System.out.println(v.toString());});
         if (paises.containsKey(respuesta)){
-            paises.remove(paises.get(respuesta));
+            System.out.println("entro al if");
+            paises.remove(respuesta);
         }
-        paises.forEach( (k,v) -> {System.out.println(v.toString());});
-  
+        paises.forEach( (k,v) -> {System.out.println(v.toString());}); 
     }
     
 }

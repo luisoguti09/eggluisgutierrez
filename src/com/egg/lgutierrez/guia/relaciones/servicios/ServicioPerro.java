@@ -5,7 +5,7 @@
  */
 package com.egg.lgutierrez.guia.relaciones.servicios;
 
-import com.egg.lgutierrez.guiacolecciones.modelos.Perro;
+import com.egg.lgutierrez.guia.relaciones.modelos.Perro;
 import com.egg.lgutierrez.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,17 +15,18 @@ import java.util.List;
  * @author Luis
  */
 public class ServicioPerro {
-    private List <Perro> perros;
+   // private List <Perro> perros;
 
-    public ServicioPerro(List<Perro> perros) {
-        this.perros = new ArrayList <Perro> ();
-    }
+   // public ServicioPerro(List<Perro> perros) {
+    //    this.perros = new ArrayList <Perro> ();
+   // }
     
-    public Perro cargarPerro(){
+    public static Perro cargarPerro(){
         Perro nuevoPerrito = new Perro();
         nuevoPerrito.setNombre(StringUtils.pedirFraseCustom("Ingrese el Nombre del Perro"));
-        nuevoPerrito.setRaza(StringUtils.pedirFraseCustom("Ingrese el nombre del Perro"));
+        nuevoPerrito.setRaza(StringUtils.pedirFraseCustom("Ingrese la Raza del Perro"));
         return nuevoPerrito;
     }   
+    
     
 }
