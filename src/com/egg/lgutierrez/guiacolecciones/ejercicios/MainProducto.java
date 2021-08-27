@@ -27,7 +27,7 @@ public class MainProducto {
             salir = StringUtils.pedirFraseCustom("Desea agregar otro producto o desa salir? agregar/salir").equalsIgnoreCase("salir") ? true : false;        
         }while(!salir);
         System.out.println("La lista de los productos ingresados es: ");
-        productos.;
+        
     }
     
 }
