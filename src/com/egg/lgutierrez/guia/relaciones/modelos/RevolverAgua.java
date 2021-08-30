@@ -42,6 +42,7 @@ package com.egg.lgutierrez.guia.relaciones.modelos;
 public class RevolverAgua {
     private int posicionAgua;
     private int posicionActual;
+    
 
     public RevolverAgua() {
     }
@@ -72,11 +73,11 @@ public class RevolverAgua {
         return "RevolverAgua{" + "posicionAgua=" + posicionAgua + ", posicionActual=" + posicionActual + '}';
     }
     
-    public void llenarRevolver(){
+   /* public void llenarRevolver(){
         int valor1 = (int) (Math.random()*6);
         int valor2 = (int) (Math.random()*6);
         this.setPosicionActual(valor1);
         this.setPosicionAgua(valor2);
-        System.out.println(this.getPosicionActual() + this.getPosicionAgua());
-    }
+        System.out.println(this.getPosicionActual() + this.getPosicionAgua());}
+   */ 
 }

@@ -12,10 +12,35 @@ devuelve true, sino false.
  */
 package com.egg.lgutierrez.guia.relaciones.servicios;
 
+import com.egg.lgutierrez.guia.relaciones.modelos.Jugador;
+import com.egg.lgutierrez.utils.MathUtils;
+import com.egg.lgutierrez.utils.StringUtils;
+import java.util.ArrayList;
+
 /**
  *
  * @author Luis
  */
 public class ServicioJugador {
+    
+    
+    
+    public ArrayList <Jugador> cargarJugadores(){
+        ArrayList <Jugador> jugadores = new ArrayList();
+        int cantJugadores = MathUtils.pedirNumeroCustom("Ingrese la cantidad de jugadores");
+        if (cantJugadores <= 6 && cantJugadores >=1){
+            for (int i = 0; i < cantJugadores; i++) {
+                Jugador player = new Jugador();
+                player.setId(i);
+                player.setNombre(StringUtils.pedirFraseCustom("Ingrese el nombre del jugador") + player.getId());
+                player.setMojado(false);
+                jugadores.add(player);
+            }
+        }
+        return jugadores;
+    }
+    
+    
+    
     
 }

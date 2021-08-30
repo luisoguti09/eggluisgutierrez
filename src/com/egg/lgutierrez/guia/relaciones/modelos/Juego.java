@@ -12,6 +12,8 @@ Pensar la lógica necesaria para realizar esto, usando los atributos de la clase
  */
 package com.egg.lgutierrez.guia.relaciones.modelos;
 
+import com.egg.lgutierrez.guia.relaciones.servicios.ServicioJugador;
+import com.egg.lgutierrez.guia.relaciones.servicios.ServicioRevolverAgua;
 import java.util.List;
 
 /**
@@ -21,6 +23,24 @@ import java.util.List;
 public class Juego {
     
     private List <Jugador> jugadores;
-    RevolverAgua r ;
+    RevolverAgua r;
+    ServicioJugador jg;
+   
+    public Juego() {
+        r = new RevolverAgua();
+    }
+    
+    public void llenarJuego(List<Jugador>jugadores, RevolverAgua r){
+           this.jugadores = jugadores;
+           this.r = r;
+    }
+    
+    public Jugador ronda(Jugador player){
+        boolean salir = false;
+        ServicioRevolverAgua servR = new ServicioRevolverAgua();
+        servR.mojar(player, r);
+        return player ;
+        
+    }
     
 }
