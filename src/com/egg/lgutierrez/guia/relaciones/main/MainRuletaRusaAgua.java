@@ -36,12 +36,12 @@ public class MainRuletaRusaAgua {
                 salir= true;
                 break;
             }else{
-                System.out.println("El jugador, se salvó");
+                System.out.println("El jugador, se salvó ");
                 System.out.println("Ahora continuaremos con la siguiente potencial victima");
                 sr.siguienteChorro();
             }
         }
-        System.out.println("A continuacion");
+        System.out.println("A continuacion ");
         System.out.println("looser: " + loser.toString());
         
     }
