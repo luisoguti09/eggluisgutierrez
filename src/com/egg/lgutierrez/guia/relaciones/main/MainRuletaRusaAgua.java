@@ -41,7 +41,7 @@ public class MainRuletaRusaAgua {
                 sr.siguienteChorro();
             }
         }
-        
+        System.out.println("A continuacion");
         System.out.println("looser: " + loser.toString());
         
     }
